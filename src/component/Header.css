@@ -1,0 +1,22 @@
+.app-header {
+    padding:0;
+    color:#f4f4f4;
+    background-color: rgb(46, 46, 46);
+}
+
+.app-header-item {
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+.app-header-item:hover {
+    background-color: rgb(116, 116, 116);
+}
+
+.app-header-logo {
+    padding: 0 10px;
+    line-height: 44px;
+    font-size: 25px;
+}
