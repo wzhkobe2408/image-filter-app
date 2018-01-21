@@ -1,0 +1,70 @@
+.app-modal-bg {
+    z-index:1;
+    width: 100%;
+    padding: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.6);
+}
+
+.app-modal {
+    position: absolute;
+    z-index:2;
+    width:35%;
+    top:30%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background: #f4f4f4;
+    padding-bottom:20px;
+    border-radius:4px;
+    overflow: hidden;
+}
+
+.app-modal-header {
+    background: rgb(78, 169, 255);
+    padding:10px 10px;
+    color:#fff;
+}
+
+.app-modal-control {
+    float:right;
+    cursor:pointer;
+}
+
+.app-modal-content {
+    padding:10px 20px;
+}
+
+.button-group {
+    float:right;
+}
+
+.btn {
+    padding:10px 15px;
+    font-size: 14px;
+    border: none;
+    cursor:pointer;
+}
+
+.btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.btn-default {
+    background: #e2e2e2;
+}
+
+.btn-success {
+    background: rgb(78, 169, 255);
+    color:#f4f4f4;
+}
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,7 @@
+.app-image-container {
+    padding-top: 20px;
+}
+
 .app-image {
     max-width: 60%;
     height:600px;
@@ -5,4 +9,10 @@
     background-position: center center;
     background-size: cover;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+}
+
+.control-icon {
+    font-size: 88px;
+    position: absolute;
+    top:0;
 }
