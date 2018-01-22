@@ -11,7 +11,7 @@
 .app-modal {
     position: absolute;
     z-index:2;
-    width:35%;
+    width:600px;
     top:30%;
     left:50%;
     transform:translate(-50%, -50%);
@@ -24,12 +24,17 @@
 .app-modal-header {
     background: rgb(78, 169, 255);
     padding:10px 10px;
+    box-sizing: border-box;
     color:#fff;
 }
 
 .app-modal-control {
     float:right;
     cursor:pointer;
+}
+
+.app-modal-control:hover, .app-modal-control:active {
+    color:rgb(61, 61, 61);
 }
 
 .app-modal-content {

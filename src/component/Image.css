@@ -3,16 +3,10 @@
 }
 
 .app-image {
-    max-width: 60%;
-    height:600px;
+    width:920px;
+    height: 600px;
     background: url(https://images.unsplash.com/photo-1515285768613-9efbec9fe26b?auto=format&fit=crop&w=1350&q=80) no-repeat;
     background-position: center center;
     background-size: cover;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
-}
-
-.control-icon {
-    font-size: 88px;
-    position: absolute;
-    top:0;
 }

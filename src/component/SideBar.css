@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .app-sidebar {
     width: 200px;
     height: 100vh;
@@ -17,7 +20,48 @@
 }
 
 .app-sidebar-item:hover {
-    background-color: rgb(167, 167, 167);
     cursor: pointer;
 }
+
+.app-sidebar-subitem {
+    padding:0;
+    list-style: none;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.app-sidebar-subitem li {
+    padding-left: 20px;
+}
+
+.nestItem {
+    background-color: rgb(56, 56, 56);
+    padding-top: 10px;
+}
+
+.detail-info {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.detail-info button {
+    cursor:pointer;
+    color:#f4f4f4;
+    padding:5px 10px;
+    background: rgb(119, 204, 86);
+    margin-right:10px;
+    margin-left: 2px;
+    margin-top: 10px;
+    border:none;
+}
+
+.detail-info a {
+    margin-top: 10px;
+    color:white;
+}
+
+.secondClassItem {
+    padding-bottom: 5px;
+}
+
 

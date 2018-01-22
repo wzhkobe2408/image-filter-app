@@ -5,10 +5,16 @@
 }
 
 .app-header-item {
+    color:#f4f4f4;
     display: inline-block;
     padding: 0 20px;
     line-height: 44px;
     cursor: pointer;
+}
+
+a {
+    color:#f4f4f4;
+    text-decoration: none;
 }
 
 .app-header-item:hover {
