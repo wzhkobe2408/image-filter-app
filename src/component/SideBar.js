@@ -42,7 +42,7 @@ class SideBar extends Component {
                                 <div className='nestItem detail-info'>
                                     <AppSlider />
                                     <button>Accept</button>
-                                    <a href="#">Reset</a>
+                                    <a href="/">Reset</a>
                                 </div>
                                  : <div></div>}
                             </div>
@@ -57,7 +57,7 @@ class SideBar extends Component {
                             <div className='nestItem detail-info'>
                                 <AppSlider />
                                 <button>Accept</button>
-                                <a href="#">Reset</a>
+                                <a href="/">Reset</a>
                             </div>
                              : <div></div>}
                         </div>
@@ -72,7 +72,7 @@ class SideBar extends Component {
                             <div className='nestItem detail-info'>
                                 <AppSlider />
                                 <button>Accept</button>
-                                <a className="" href="#">Reset</a>
+                                <a href="/">Reset</a>
                             </div>
                              : <div></div>}
                         </div>
@@ -87,7 +87,7 @@ class SideBar extends Component {
                             <div className='nestItem detail-info'>
                                 <AppSlider />
                                 <button>Accept</button>
-                                <a href="#">Reset</a>
+                                <a href="/">Reset</a>
                             </div>
                              : <div></div>}
                         </div>
