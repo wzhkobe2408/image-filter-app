@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+
+
+// Component
 import AppHeader from './component/Header'
 import SideBar from './component/SideBar'
 import MainContent from './component/MainContent'
 import Modal from './component/Modal'
 import About from './component/About'
+
+
 
 class App extends Component {
   constructor(props) {

@@ -1,10 +1,14 @@
-export const Filter = (state, action) => {
+// for example: action.payload => { data:95, key:'Hue' }
+
+
+const filter = (state = 50, action) => {
     switch (action.type) {
-        case value:
-            
+        case 'SET_FILTER':
+            return action.payload;
             break;
-    
         default:
-            break;
+            return state;
     }
 }
+
+export default filter;

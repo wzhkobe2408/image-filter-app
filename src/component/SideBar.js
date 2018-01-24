@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import AppSlider from './Slider'
 import './SideBar.css'
+import { bindActionCreators } from 'redux'
+import { setFilter } from '../action'
+import { connect } from 'react-redux'
 
 class SideBar extends Component {
     constructor(props) {
@@ -28,19 +31,24 @@ class SideBar extends Component {
             })
         }
     }
+
+    justifyParams() {
+        console.log('Test to see the redux: ', this.props);
+        this.props.setFilter(24);
+    }
     
     render() {
         return (
             <div className="app-sidebar">
                 <ul className="app-sidebar-wrapper">
-                    <li className="app-sidebar-item">Adjust</li>
+                    <li onClick={this.justifyParams.bind(this)} className="app-sidebar-item">Adjust</li>
                     <ul className="app-sidebar-subitem">
                         {this.state.data[0].map((item, index) => 
                             <div key={index}>
                                 <li className={this.state.activeItem === item? 'secondClassItem nestItem' : 'secondClassItem'} onClick={this.handleClick.bind(this, 0)}>{item}</li>
                                 {this.state.activeItem === item? 
                                 <div className='nestItem detail-info'>
-                                    <AppSlider />
+                                    <AppSlider filter={this.props.filter} setFilter={this.props.setFilter} />
                                     <button>Accept</button>
                                     <a href="/">Reset</a>
                                 </div>
@@ -55,7 +63,7 @@ class SideBar extends Component {
                             <li className={this.state.activeItem === item? 'secondClassItem nestItem' : 'secondClassItem'} onClick={this.handleClick.bind(this, 1)} key={index}>{item}</li>
                             {this.state.activeItem === item? 
                             <div className='nestItem detail-info'>
-                                <AppSlider />
+                                <AppSlider filter={this.props.filter} setFilter={this.props.setFilter} />
                                 <button>Accept</button>
                                 <a href="/">Reset</a>
                             </div>
@@ -70,7 +78,7 @@ class SideBar extends Component {
                             <li className={this.state.activeItem === item? 'secondClassItem nestItem' : 'secondClassItem'} onClick={this.handleClick.bind(this, 2)}  key={index}>{item}</li>
                             {this.state.activeItem === item? 
                             <div className='nestItem detail-info'>
-                                <AppSlider />
+                                <AppSlider filter={this.props.filter} setFilter={this.props.setFilter} />
                                 <button>Accept</button>
                                 <a href="/">Reset</a>
                             </div>
@@ -85,7 +93,7 @@ class SideBar extends Component {
                             <li className={this.state.activeItem === item? 'secondClassItem nestItem' : 'secondClassItem'} onClick={this.handleClick.bind(this, 3)} key={index}>{item}</li>
                             {this.state.activeItem === item? 
                             <div className='nestItem detail-info'>
-                                <AppSlider />
+                                <AppSlider filter={this.props.filter} setFilter={this.props.setFilter} />
                                 <button>Accept</button>
                                 <a href="/">Reset</a>
                             </div>
@@ -93,10 +101,23 @@ class SideBar extends Component {
                         </div>
                         )}
                     </ul>
+                    <li className="app-sidebar-item">Redux: {this.props.filter}</li>
                 </ul>
             </div>
         );
     }
 }
 
-export default SideBar;
+function mapStateToProps(state) {
+    return {
+        filter: state.filter
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        setFilter: setFilter
+    }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideBar);

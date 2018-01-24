@@ -1,6 +1,6 @@
-export const changeFilter = (data) => {
+export const setFilter = (data) => {
     return {
-        type:'',
-        payload:''
+        type:'SET_FILTER',
+        payload:data
     }
 }
